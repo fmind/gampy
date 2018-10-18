@@ -70,16 +70,19 @@ def test_flippable():
     assert f(3, 2) == 8
 
 
-# In[7]:
+# In[24]:
 
 
 def test_fluentable():
     f = advices.fluentable()(list.append)
+    g = advices.fluentable(9)(list.append)
+
     l = list()
-
     f(f(f(l, 0), 1), 2)
-
     assert l == [0, 1, 2]
+
+    l = list()
+    assert g(l, 1) is None
 
 
 # In[8]:
@@ -146,12 +149,12 @@ def test_exceptional():
     assert f(5) == 2
 
 
-# In[13]:
+# In[28]:
 
 
 def test_loggable():
     mock = Mock()
-    f = advices.loggable(mock)(int)
+    f = advices.loggable(mock, True, True)(int)
 
     assert f(0) == 0
     assert f(1) == 1
@@ -163,8 +166,16 @@ def test_loggable():
         (("exit: int",), {}),
     ]
 
+    mock = Mock()
+    f = advices.loggable(mock, False, False)(int)
 
-# In[14]:
+    assert f(0) == 0
+    assert f(1) == 1
+
+    assert not mock.call_args_list
+
+
+# In[30]:
 
 
 def test_traceable():
@@ -181,11 +192,19 @@ def test_traceable():
         (("[POST] int(1) -> 1",), {}),
     ]
 
+    mock = Mock()
+    f = advices.traceable(mock, False, False)(int)
+
+    assert f(0) == 0
+    assert f(1) == 1
+
+    assert not mock.call_args_list
+
 
 test_traceable()
 
 
-# In[20]:
+# In[31]:
 
 
 ipytest.run_tests()
