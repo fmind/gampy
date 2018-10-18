@@ -16,7 +16,7 @@ def requires(requirements="requirements.txt"):
 
 info = dict(
     name="gampy",
-    version="0.0.0",
+    version="1.0.0",
     license="EUPL-1.2",
     author="Médéric Hurier",
     author_email="dev@fmind.me",
