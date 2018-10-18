@@ -1,7 +1,10 @@
 #!/usr/bin/env python
 # coding: utf-8
 
-# In[ ]:
+# In[2]:
+
+
+"""Errors of the project."""
 
 
 class Error(Exception):
@@ -10,13 +13,13 @@ class Error(Exception):
     pass
 
 
-class ExecutionError(Error):
-    """Error of program execution."""
+class DefinitionError(Error):
+    """Error during definition."""
 
     pass
 
 
-class DefinitionError(Error):
-    """Error of program definition."""
+class CompositionError(Error):
+    """Error during composition."""
 
     pass
