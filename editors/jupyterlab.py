@@ -15,7 +15,15 @@ def post_save_hook(model, os_path, contents_manager):
         output = name.replace(".ipynb", "").lower()
 
         subprocess.check_call(
-            ["jupyter", "nbconvert", "--to", "python", "--output", output, name],
+            [
+                "jupyter",
+                "nbconvert",
+                "--to",
+                "python",
+                "--output",
+                output,
+                name,
+            ],
             cwd=cwd,
         )
         subprocess.check_call(["chmod", "u+x", output], cwd=cwd)

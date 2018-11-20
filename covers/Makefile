@@ -4,6 +4,7 @@ NAME = $(shell .venv/bin/python setup.py --name)
 
 init-covers: .venv
 	.venv/bin/pip install '.[covers]'
+	ln -fs 'covers/coverage.ini' '.coveragerc'
 
 clean-covers:
 	find . -name '.mypy_cache' -exec rm -fr {} +
@@ -11,10 +12,10 @@ clean-covers:
 commit-covers: report;
 
 cover: .venv
-	.venv/bin/coverage run --rcfile="covers/coverage.ini" --source ${NAME} -m pytest -q
+	.venv/bin/coverage run --source ${NAME} -m pytest -q
 
 report: .venv cover
-	.venv/bin/coverage report --rcfile="covers/coverage.ini"
+	.venv/bin/coverage report
 
 htmlcov: .venv cover
-	.venv/bin/coverage html --rcfile="covers/coverage.ini" --directory="covers/htmlcov"
+	.venv/bin/coverage html --directory="covers/htmlcov"

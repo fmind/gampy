@@ -4,11 +4,11 @@ NAME = $(shell .venv/bin/python setup.py --name)
 
 init-lints: .venv
 	.venv/bin/pip install '.[lints]'
+	ln -fs 'lints/pylint.ini' 'pylintrc'
 
-clean-lints:
-	find . -name '.mypy_cache' -exec rm -fr {} +
+clean-lints: ;
 
 commit-lints: lint;
 
 lint: .venv
-	.venv/bin/pylint --rcfile='lints/pylint.ini' ${NAME}
+	.venv/bin/pylint ${NAME}

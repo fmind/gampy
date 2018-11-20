@@ -57,23 +57,38 @@ def test_init():
 
     with pytest.raises(DefinitionError) as err:
         Pipeline([()])
-    assert str(err.value) == "A tuple step should contain 1, 2 or 3 items. Not: 0."
+    assert (
+        str(err.value)
+        == "A tuple step should contain 1, 2 or 3 items. Not: 0."
+    )
 
     with pytest.raises(DefinitionError) as err:
         Pipeline([(map, [], {}, 0)])
-    assert str(err.value) == "A tuple step should contain 1, 2 or 3 items. Not: 4."
+    assert (
+        str(err.value)
+        == "A tuple step should contain 1, 2 or 3 items. Not: 4."
+    )
 
     with pytest.raises(DefinitionError) as err:
         Pipeline([(0, [], {})])
-    assert str(err.value) == "The first step argument should be Callable. Not: int."
+    assert (
+        str(err.value)
+        == "The first step argument should be Callable. Not: int."
+    )
 
     with pytest.raises(DefinitionError) as err:
         Pipeline([(map, 0, {})])
-    assert str(err.value) == "The second step argument should be Iterable. Not: int."
+    assert (
+        str(err.value)
+        == "The second step argument should be Iterable. Not: int."
+    )
 
     with pytest.raises(DefinitionError) as err:
         Pipeline([(map, [], 0)])
-    assert str(err.value) == "The third step argument should be Mapping. Not: int."
+    assert (
+        str(err.value)
+        == "The third step argument should be Mapping. Not: int."
+    )
 
 
 # In[5]:
@@ -87,7 +102,11 @@ def test_hash():
 
 
 def test_getter():
-    assert P0.steps == [(map, [inc], {}), (filter, [iseven], {}), (list, [], {})]
+    assert P0.steps == [
+        (map, [inc], {}),
+        (filter, [iseven], {}),
+        (list, [], {}),
+    ]
 
 
 # In[7]:
@@ -110,7 +129,11 @@ def test_context():
         p.append((map, [inc]))
         p.append((reduce, [add]))
 
-    assert pipeline.steps == [(range, [10], {}), (map, [inc], {}), (reduce, [add], {})]
+    assert pipeline.steps == [
+        (range, [10], {}),
+        (map, [inc], {}),
+        (reduce, [add], {}),
+    ]
 
 
 # In[9]:

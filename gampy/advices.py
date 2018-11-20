@@ -149,7 +149,9 @@ def optional(x: Any) -> Advice:
 # In[ ]:
 
 
-def retryable(d: Any = None, n: int = 3, on: Type[Exception] = Exception) -> Advice:
+def retryable(
+    d: Any = None, n: int = 3, on: Type[Exception] = Exception
+) -> Advice:
     """Retry f n times until success."""
 
     def advice(f):
@@ -191,7 +193,9 @@ def exceptional(x: Any = None, on: Type[Exception] = Exception) -> Advice:
 
 
 def loggable(
-    logger: Callable[[str], None] = logging.info, pre: bool = True, post: bool = True
+    logger: Callable[[str], None] = logging.info,
+    pre: bool = True,
+    post: bool = True,
 ) -> Advice:
     """Log f before and/or after call."""
 
@@ -217,7 +221,9 @@ def loggable(
 
 
 def traceable(
-    printer: Callable[[str], None] = print, pre: bool = True, post: bool = False
+    printer: Callable[[str], None] = print,
+    pre: bool = True,
+    post: bool = False,
 ) -> Advice:
     """Print f trace before and/or after call."""
 
