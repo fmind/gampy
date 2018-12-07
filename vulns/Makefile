@@ -1,11 +1,9 @@
-.PHONY: vuln
-
 init-vulns: .venv
 	.venv/bin/pip install '.[vulns]'
 
 clean-vulns: ;
 
-commit-vulns: vuln;
+commit-vulns: safe;
 
-vuln: .venv
+safe: .venv
 	.venv/bin/safety check

@@ -1,5 +1,3 @@
-.PHONY: type
-
 init-types: .venv
 	.venv/bin/pip install '.[types]'
 	ln -fs 'types/mypy.ini' 'mypy.ini'

@@ -1,5 +1,3 @@
-.PHONY: edit
-
 init-editors: .venv
 	.venv/bin/pip install '.[editors]'
 	ln -fs 'editors/jupyterlab.py' 'jupyterlab.py'

@@ -1,5 +1,3 @@
-.PHONY: lint
-
 NAME = $(shell .venv/bin/python setup.py --name)
 
 init-lints: .venv

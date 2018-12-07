@@ -10,16 +10,10 @@
 class Error(Exception):
     """Base class for errors."""
 
-    pass
-
 
 class DefinitionError(Error):
     """Error during definition."""
 
-    pass
-
 
 class CompositionError(Error):
     """Error during composition."""
-
-    pass

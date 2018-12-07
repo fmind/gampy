@@ -1,5 +1,3 @@
-.PHONY: test
-
 init-tests: .venv
 	.venv/bin/pip install '.[tests]'
 	ln -fs 'tests/pytest.ini' 'pytest.ini'

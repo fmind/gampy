@@ -1,0 +1,168 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+Advice	gampy/structures.py	/^Advice = Callable[[Function], Function]$/;"	v
+Args	gampy/structures.py	/^Args = Sequence$/;"	v
+CompositionError	gampy/errors.py	/^class CompositionError(Error):$/;"	c
+DefinitionError	gampy/errors.py	/^class DefinitionError(Error):$/;"	c
+Error	gampy/errors.py	/^class Error(Exception):$/;"	c
+Function	gampy/structures.py	/^Function = Callable$/;"	v
+Kwargs	gampy/structures.py	/^Kwargs = Mapping$/;"	v
+P0	tests/test_structures.py	/^P0 = Pipeline([(map, [inc], {}), (filter, [iseven]), (list,)])$/;"	v
+P00	tests/test_structures.py	/^P00 = Pipeline([(map, [inc])])$/;"	v
+P01	tests/test_structures.py	/^P01 = Pipeline([(filter, [iseven])])$/;"	v
+P02	tests/test_structures.py	/^P02 = Pipeline([list])$/;"	v
+P1	tests/test_structures.py	/^P1 = Pipeline([(reduce, [add])])$/;"	v
+PartialStep	gampy/structures.py	/^PartialStep = Union[Function, Sequence]$/;"	v
+Pipeline	gampy/structures.py	/^class Pipeline:$/;"	c
+Step	gampy/structures.py	/^Step = Tuple[Function, Args, Kwargs]$/;"	v
+__add__	gampy/structures.py	/^    def __add__(self, other: "Pipeline") -> "Pipeline":$/;"	m	class:Pipeline	file:
+__and__	gampy/structures.py	/^    def __and__(self, other: "Pipeline") -> "Pipeline":$/;"	m	class:Pipeline	file:
+__bool__	gampy/structures.py	/^    def __bool__(self) -> bool:$/;"	m	class:Pipeline	file:
+__call__	gampy/structures.py	/^    def __call__(self) -> Callable:$/;"	m	class:Pipeline	file:
+__contains__	gampy/structures.py	/^    def __contains__(self, step: Step) -> bool:$/;"	m	class:Pipeline	file:
+__enter__	gampy/structures.py	/^    def __enter__(self) -> Sequence[Step]:$/;"	m	class:Pipeline	file:
+__eq__	gampy/structures.py	/^    def __eq__(self, other) -> bool:$/;"	m	class:Pipeline	file:
+__exit__	gampy/structures.py	/^    def __exit__(self, exc_type, exc_value, traceback) -> None:$/;"	m	class:Pipeline	file:
+__floordiv__	gampy/structures.py	/^    def __floordiv__(self, n: int) -> Sequence["Pipeline"]:$/;"	m	class:Pipeline	file:
+__ge__	gampy/structures.py	/^    def __ge__(self, other: "Pipeline") -> bool:$/;"	m	class:Pipeline	file:
+__getitem__	gampy/structures.py	/^    def __getitem__(self, n: int) -> Step:$/;"	m	class:Pipeline	file:
+__gt__	gampy/structures.py	/^    def __gt__(self, other: "Pipeline") -> bool:$/;"	m	class:Pipeline	file:
+__hash__	gampy/structures.py	/^    def __hash__(self) -> int:$/;"	m	class:Pipeline	file:
+__init__	gampy/structures.py	/^    def __init__(self, steps: Iterable) -> None:$/;"	m	class:Pipeline
+__iter__	gampy/structures.py	/^    def __iter__(self) -> Iterable[Step]:$/;"	m	class:Pipeline	file:
+__le__	gampy/structures.py	/^    def __le__(self, other: "Pipeline") -> bool:$/;"	m	class:Pipeline	file:
+__len__	gampy/structures.py	/^    def __len__(self) -> int:$/;"	m	class:Pipeline	file:
+__lshift__	gampy/structures.py	/^    def __lshift__(self, other: "Pipeline") -> bool:$/;"	m	class:Pipeline	file:
+__lt__	gampy/structures.py	/^    def __lt__(self, other: "Pipeline") -> bool:$/;"	m	class:Pipeline	file:
+__matmul__	gampy/structures.py	/^    def __matmul__(self, advice: Advice) -> "Pipeline":$/;"	m	class:Pipeline	file:
+__mod__	gampy/structures.py	/^    def __mod__(self, other: "Pipeline") -> "Pipeline":$/;"	m	class:Pipeline	file:
+__mul__	gampy/structures.py	/^    def __mul__(self, n: int) -> "Pipeline":$/;"	m	class:Pipeline	file:
+__ne__	gampy/structures.py	/^    def __ne__(self, other) -> bool:$/;"	m	class:Pipeline	file:
+__or__	gampy/structures.py	/^    def __or__(self, f: Callable) -> "Pipeline":$/;"	m	class:Pipeline	file:
+__pow__	gampy/structures.py	/^    def __pow__(self, other: "Pipeline") -> bool:$/;"	m	class:Pipeline	file:
+__repr__	gampy/structures.py	/^    def __repr__(self) -> str:$/;"	m	class:Pipeline	file:
+__reversed__	gampy/structures.py	/^    def __reversed__(self) -> "Pipeline":$/;"	m	class:Pipeline	file:
+__rshift__	gampy/structures.py	/^    def __rshift__(self, other: "Pipeline") -> bool:$/;"	m	class:Pipeline	file:
+__str__	gampy/structures.py	/^    def __str__(self) -> str:$/;"	m	class:Pipeline	file:
+__sub__	gampy/structures.py	/^    def __sub__(self, other: "Pipeline") -> "Pipeline":$/;"	m	class:Pipeline	file:
+__truediv__	gampy/structures.py	/^    def __truediv__(self, n: int) -> Sequence["Pipeline"]:$/;"	m	class:Pipeline	file:
+__xor__	gampy/structures.py	/^    def __xor__(self, other: "Pipeline") -> "Pipeline":$/;"	m	class:Pipeline	file:
+add	tests/test_structures.py	/^def add(a, b):$/;"	f
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:constable
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:exceptional
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:flippable
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:fluentable
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:identical
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:loggable
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:optional
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:postable
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:preable
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:retryable
+advice	gampy/advices.py	/^    def advice(f):$/;"	f	function:traceable
+advice	tests/test_structures.py	/^    def advice(f):$/;"	f	function:test_matmul
+author	setup.py	/^    author="Médéric Hurier",$/;"	v
+author_email	setup.py	/^    author_email="dev@fmind.me",$/;"	v
+c	editors/jupyterlab.py	/^c = get_config()$/;"	v
+c	ipython.py	/^c = get_config()$/;"	v
+c	jupyterlab.py	/^c = get_config()$/;"	v
+c	shells/ipython.py	/^c = get_config()$/;"	v
+cacheable	gampy/advices.py	/^def cacheable(n: int = 128, typed: bool = False) -> Advice:$/;"	f
+classifiers	setup.py	/^    classifiers=[$/;"	v
+comp	gampy/structures.py	/^        def comp(f, g):$/;"	f	function:Pipeline.__call__
+composition	gampy/structures.py	/^            def composition(*args, **kwargs):$/;"	f	function:Pipeline.__call__.comp
+constable	gampy/advices.py	/^def constable(x: Any = None) -> Advice:$/;"	f
+description	setup.py	/^    description="General Abstract Meta Programming for Python",$/;"	v
+div10	tests/test_advices.py	/^div10 = lambda x: 10 \/ x$/;"	v
+exceptional	gampy/advices.py	/^def exceptional(x: Any = None, on: Type[Exception] = Exception) -> Advice:$/;"	f
+extras_require	setup.py	/^    extras_require={$/;"	v
+flippable	gampy/advices.py	/^def flippable() -> Advice:$/;"	f
+fluentable	gampy/advices.py	/^def fluentable(n: int = 0) -> Advice:$/;"	f
+gdict	tests/test_advices.py	/^gdict = lambda x: {0: 0, 1: 1}.get(x)$/;"	v
+identical	gampy/advices.py	/^def identical() -> Advice:$/;"	f
+inc	tests/test_structures.py	/^def inc(x):$/;"	f
+info	setup.py	/^info = dict($/;"	v
+install_requires	setup.py	/^    install_requires=requires(),$/;"	v
+iseven	tests/test_structures.py	/^def iseven(x):$/;"	f
+keywords	setup.py	/^    keywords="general abstract meta programming",$/;"	v
+license	setup.py	/^    license="AGPL-3.0",$/;"	v
+loggable	gampy/advices.py	/^def loggable($/;"	f
+long_description	setup.py	/^    long_description=open("README.md", "r").read(),$/;"	v
+long_description_content_type	setup.py	/^    long_description_content_type="text\/markdown",$/;"	v
+name	setup.py	/^    name="gampy",$/;"	v
+optional	gampy/advices.py	/^def optional(x: Any) -> Advice:$/;"	f
+packages	setup.py	/^    packages=["gampy"],$/;"	v
+part	gampy/structures.py	/^        def part(step):$/;"	f	function:Pipeline.__call__
+post_save_hook	editors/jupyterlab.py	/^def post_save_hook(model, os_path, contents_manager):$/;"	f
+post_save_hook	jupyterlab.py	/^def post_save_hook(model, os_path, contents_manager):$/;"	f
+postable	gampy/advices.py	/^def postable(do: Callable[[], None]) -> Advice:$/;"	f
+preable	gampy/advices.py	/^def preable(do: Callable[[], None]) -> Advice:$/;"	f
+requires	setup.py	/^def requires(requirements="requirements.txt"):$/;"	f
+retryable	gampy/advices.py	/^def retryable($/;"	f
+root	setup.py	/^root = os.path.abspath(os.path.dirname(__file__))$/;"	v
+steps	gampy/structures.py	/^    def steps(self) -> Sequence[Step]:$/;"	m	class:Pipeline
+steps	gampy/structures.py	/^    def steps(self, steps: Iterable[PartialStep]) -> None:$/;"	m	class:Pipeline
+test_add	tests/test_structures.py	/^def test_add():$/;"	f
+test_advices	tests/test_gampy.py	/^def test_advices():$/;"	f
+test_and	tests/test_structures.py	/^def test_and():$/;"	f
+test_bool	tests/test_structures.py	/^def test_bool():$/;"	f
+test_cacheable	tests/test_advices.py	/^def test_cacheable():$/;"	f
+test_call	tests/test_structures.py	/^def test_call():$/;"	f
+test_constable	tests/test_advices.py	/^def test_constable():$/;"	f
+test_contains	tests/test_structures.py	/^def test_contains():$/;"	f
+test_context	tests/test_structures.py	/^def test_context():$/;"	f
+test_eq	tests/test_structures.py	/^def test_eq():$/;"	f
+test_exceptional	tests/test_advices.py	/^def test_exceptional():$/;"	f
+test_flippable	tests/test_advices.py	/^def test_flippable():$/;"	f
+test_floordiv	tests/test_structures.py	/^def test_floordiv():$/;"	f
+test_fluentable	tests/test_advices.py	/^def test_fluentable():$/;"	f
+test_ge	tests/test_structures.py	/^def test_ge():$/;"	f
+test_getitem	tests/test_structures.py	/^def test_getitem():$/;"	f
+test_getter	tests/test_structures.py	/^def test_getter():$/;"	f
+test_gt	tests/test_structures.py	/^def test_gt():$/;"	f
+test_hash	tests/test_structures.py	/^def test_hash():$/;"	f
+test_identical	tests/test_advices.py	/^def test_identical():$/;"	f
+test_init	tests/test_structures.py	/^def test_init():$/;"	f
+test_iter	tests/test_structures.py	/^def test_iter():$/;"	f
+test_le	tests/test_structures.py	/^def test_le():$/;"	f
+test_len	tests/test_structures.py	/^def test_len():$/;"	f
+test_loggable	tests/test_advices.py	/^def test_loggable():$/;"	f
+test_lshift	tests/test_structures.py	/^def test_lshift():$/;"	f
+test_lt	tests/test_structures.py	/^def test_lt():$/;"	f
+test_matmul	tests/test_structures.py	/^def test_matmul():$/;"	f
+test_mod	tests/test_structures.py	/^def test_mod():$/;"	f
+test_mul	tests/test_structures.py	/^def test_mul():$/;"	f
+test_ne	tests/test_structures.py	/^def test_ne():$/;"	f
+test_optional	tests/test_advices.py	/^def test_optional():$/;"	f
+test_or	tests/test_structures.py	/^def test_or():$/;"	f
+test_pipeline	tests/test_gampy.py	/^def test_pipeline():$/;"	f
+test_postable	tests/test_advices.py	/^def test_postable():$/;"	f
+test_pow	tests/test_structures.py	/^def test_pow():$/;"	f
+test_preable	tests/test_advices.py	/^def test_preable():$/;"	f
+test_repr	tests/test_structures.py	/^def test_repr():$/;"	f
+test_retryable	tests/test_advices.py	/^def test_retryable():$/;"	f
+test_reversed	tests/test_structures.py	/^def test_reversed():$/;"	f
+test_rshift	tests/test_structures.py	/^def test_rshift():$/;"	f
+test_setter	tests/test_structures.py	/^def test_setter():$/;"	f
+test_str	tests/test_structures.py	/^def test_str():$/;"	f
+test_sub	tests/test_structures.py	/^def test_sub():$/;"	f
+test_traceable	tests/test_advices.py	/^def test_traceable():$/;"	f
+test_truediv	tests/test_structures.py	/^def test_truediv():$/;"	f
+test_xor	tests/test_structures.py	/^def test_xor():$/;"	f
+traceable	gampy/advices.py	/^def traceable($/;"	f
+url	setup.py	/^    url="https:\/\/git.fmind.me\/fmind\/gampy",$/;"	v
+version	setup.py	/^    version="1.0.1",$/;"	v
+wrapped	gampy/advices.py	/^        def wrapped(*_, **__):$/;"	f	function:constable.advice
+wrapped	gampy/advices.py	/^        def wrapped(*args, **kwargs):$/;"	f	function:exceptional.advice
+wrapped	gampy/advices.py	/^        def wrapped(*args, **kwargs):$/;"	f	function:flippable.advice
+wrapped	gampy/advices.py	/^        def wrapped(*args, **kwargs):$/;"	f	function:fluentable.advice
+wrapped	gampy/advices.py	/^        def wrapped(*args, **kwargs):$/;"	f	function:loggable.advice
+wrapped	gampy/advices.py	/^        def wrapped(*args, **kwargs):$/;"	f	function:optional.advice
+wrapped	gampy/advices.py	/^        def wrapped(*args, **kwargs):$/;"	f	function:postable.advice
+wrapped	gampy/advices.py	/^        def wrapped(*args, **kwargs):$/;"	f	function:preable.advice
+wrapped	gampy/advices.py	/^        def wrapped(*args, **kwargs):$/;"	f	function:retryable.advice
+wrapped	gampy/advices.py	/^        def wrapped(*args, **kwargs):$/;"	f	function:traceable.advice
+wrapped	tests/test_structures.py	/^        def wrapped(*args, **kwargs):$/;"	f	function:test_matmul.advice
